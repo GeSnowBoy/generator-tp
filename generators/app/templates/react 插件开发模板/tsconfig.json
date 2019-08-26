@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": ["es7", "dom"],
+    "experimentalDecorators": true,
+    "target": "es5",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src/",
+    "outDir": "./lib/",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "sourceMap": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

@@ -1,0 +1,51 @@
+/* 
+  小程序css reset
+*/
+View,
+page,
+input,
+Text,
+image,
+button,
+textarea {
+  box-sizing: border-box;
+  height: unset;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  color: inherit;
+}
+image {
+  display: block;
+  width: auto;
+  height: auto;
+}
+input,
+textarea {
+  display: block;
+  min-height: auto;
+}
+
+button {
+  display: block;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  padding: unset;
+  text-decoration: none;
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  background-color: transparent;
+  &.button-hover {
+    background-color: transparent;
+  }
+}
+
+button:after {
+  border-radius: 0;
+  border: none;
+  padding: unset;
+  margin: unset;
+}

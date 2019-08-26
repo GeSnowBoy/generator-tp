@@ -1,0 +1,12 @@
+{
+  "name": "generator-tp",
+  "version": "0.0.6",
+  "description": "模板工具",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "yeoman-generator": "^3.2.0"
+  }
+}
