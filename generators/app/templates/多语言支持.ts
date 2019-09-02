@@ -7,20 +7,19 @@ export function transform<T extends { [D: string]: string[] }>(
 ) {
   let defaultIndex = getLanguage() == 'zh' ? 0 : 1;
 
-  function handle(appendLanguagePackage?: any): (key: keyof T) => string;
-  function handle<TT extends { [D: string]: string[] }>(
+  return function<TT extends { [D: string]: string[] }>(
     appendLanguagePackage: TT,
     languageIndex?: number
   ): (key: keyof T | keyof TT) => string {
-    appendLanguagePackage = appendLanguagePackage || ({} as any);
+    appendLanguagePackage = {
+      ...languagePackage,
+      ...appendLanguagePackage
+    };
     let index =
-      typeof languageIndex !== undefined ? languageIndex : defaultIndex;
+      typeof languageIndex !== 'undefined' ? languageIndex : defaultIndex;
     return (key: any) =>
-      appendLanguagePackage[key as keyof TT][index] ||
-      languagePackage[key as keyof T][index] ||
-      'key';
-  }
-  return handle;
+      (appendLanguagePackage[key] && appendLanguagePackage[key][index]) || key;
+  };
 }
 
 //  键值: [中文,英文]
