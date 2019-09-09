@@ -4,25 +4,19 @@ import Taro from '@tarojs/taro';
 import { View } from '@tarojs/components';
 
 
-interface P {
-  
-}
 
-interface S {
-  
-}
+const initState = {};
+const initProps = {};
+type P = typeof initProps;
+type S = typeof initState;
 
-export default class  <%= dirName %> extends Taro.Component<P, S> {
-  constructor(props:P) {
-    super(props);
-    this.state = {
-      
-    };
-  }
+export  class  <%= dirName %> extends Taro.Component<P, S> {
+  state = initState;
+  static defaultProps = initProps;
   
   render() {
    
-    return <View className="<%= dirName %>">
+    return <View className="wrap">
          <%= dirName %>
        </View>
   }
