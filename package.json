@@ -5,6 +5,13 @@
   "bin": {
     "tp": "dist/index.js"
   },
+  "files": [
+    "/dist",
+    "/templates/"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {

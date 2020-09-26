@@ -1,0 +1,20 @@
+stages:
+    - test
+    - publish
+
+build_and_test_job:
+    stage: test
+    script:
+        - npm install
+        - npm run build
+    except:
+        - prod
+
+publish_job:
+    stage: publish
+    script:
+        - npm install
+        - npm run build
+        - npm publish
+    only:
+        - prod
