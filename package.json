@@ -1,5 +1,5 @@
 {
-  "name": "@curiositychina/generator-tp",
+  "name": "generator-tp",
   "version": "1.0.0",
   "description": "模板工具",
   "bin": {
