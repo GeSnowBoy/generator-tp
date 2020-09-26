@@ -43,3 +43,5 @@ jspm_packages
 !generators/app/templates/.vscode
 /dist
 /sass-lint.html
+test
+tsconfig.tsbuildinfo

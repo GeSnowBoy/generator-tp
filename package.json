@@ -1,12 +1,18 @@
 {
   "name": "generator-tp",
-  "version": "0.0.12",
+  "version": "1.0.0",
   "description": "模板工具",
-  "keywords": [
-    "yeoman-generator"
-  ],
+  "bin": {
+    "tp": "dist/index.js"
+  },
   "license": "ISC",
-  "devDependencies": {
-    "yeoman-generator": "^3.2.0"
+  "devDependencies": {},
+  "dependencies": {
+    "@types/yeoman-environment": "^2.10.1",
+    "@types/yeoman-generator": "^4.11.2",
+    "commander": "^6.1.0",
+    "typescript": "^4.0.3",
+    "yeoman-environment": "^2.10.3",
+    "yeoman-generator": "^4.12.0"
   }
 }
